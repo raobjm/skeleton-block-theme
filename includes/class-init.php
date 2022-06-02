@@ -40,15 +40,6 @@ class Init {
 	 */
 	protected static $instance;
 
-	/**
-	 * The public class of the theme.
-	 *
-	 * @since    0.0.1
-	 * @access   protected
-	 * @var      Front $front The current version of the theme.
-	 */
-	protected $front;
-
 
 	/**
 	 * Define the core functionality of the theme.
@@ -113,7 +104,7 @@ class Init {
 	 */
 	private function define_public_hooks() {
 
-		$this->front = new Front();
+		new Front();
 
 	}
 
