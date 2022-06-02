@@ -1,23 +1,20 @@
-# SkeletonGutenbergBlocks
+# SkeletonBlockTheme
 Skeleton for WordPress Plugin Boilerplate with Namespace and Gutenberg Block support
 
 
 ## Changes Required to start Development:
 
 1. Rename files in:
-    * `/skeleton-gutenberg-blocks.php`
-    * `/languages/plugin-text-domain.pot`
+    * `/skeleton-block-theme.php`
+    * `/languages/skeleton-block-theme.pot`
    
 2. Run Search Replace with **Preserve Case**:
-    * @plugin For Class Name `SkeletonGutenbergBlocks => YourPluginName`
-    * @plugin For constants: `SKELETON_GUTENBERG_BLOCKS_ => YOUR_PLUGIN_NAME_`
-    * @plugin For function names `skeleton_gutenberg_blocks to your_plugin_name`
-    * @plugin For Text Domain `plugin-text-domain => your-plugin-text-domain`  
-    * @git_author For Github Author: `boospot => YourAuthorName`
-    * @author For Author Name: `Rao => YourName`
-    * @author For email: `rao@booskills.com => YourEmail`
-    * @link For Link: `https://booskills.com/rao => YourLink`
-    * Update Plugin Comment Block in main file `/sgb.php`
+    * @plugin For Class Name `SkeletonBlockTheme => YourThemeName`
+    * @plugin For constants: `SKELETON_BLOCK_THEME_ => YOUR_THEME_NAME_`
+    * @plugin For function names `skeleton_block_theme to your_theme_name`
+    * @plugin For Text Domain `theme-text-domain => your-theme-text-domain`  
+    * @link For Link: `https://bjmdigital.com.au => YourLink`
+    * Update Theme Comment Block in main file `/style.css`
    
 3. After Adding more files as you go, use composer to update autoload if you need to. You shall need to have composer installed on your computer. In Terminal in the plugin directory, run following:
     *  `composer update`

@@ -1,16 +1,16 @@
 <?php
-namespace SkeletonGutenbergBlocks;
+namespace SkeletonBlockTheme;
 /**
  * Define the internationalization functionality
  *
  * Loads and defines the internationalization files for this plugin
  * so that it is ready for translation.
  *
- * @link       https://booskills.com/rao
- * @since      1.0.0
+ * @link       https://bjmdigital.com.au/
+ * @since      0.0.1
  *
- * @package    SkeletonGutenbergBlocks
- * @subpackage SkeletonGutenbergBlocks/includes
+ * @package    SkeletonBlockTheme
+ * @subpackage SkeletonBlockTheme/includes
  */
 
 /**
@@ -19,10 +19,10 @@ namespace SkeletonGutenbergBlocks;
  * Loads and defines the internationalization files for this plugin
  * so that it is ready for translation.
  *
- * @since      1.0.0
- * @package    SkeletonGutenbergBlocks
- * @subpackage SkeletonGutenbergBlocks/includes
- * @author     Rao <rao@booskills.com>
+ * @since      0.0.1
+ * @package    SkeletonBlockTheme
+ * @subpackage SkeletonBlockTheme/includes
+ * @author     BJM <developers@bjmdigital.com.au>
  */
 class i18N {
 	/** @noinspection SpellCheckingInspection */
@@ -31,12 +31,12 @@ class i18N {
 	/**
 	 * Load the plugin text domain for translation.
 	 *
-	 * @since    1.0.0
+	 * @since    0.0.1
 	 */
 	public function load_plugin_textdomain() {
 
 		load_plugin_textdomain(
-			'plugin-text-domain',
+			'blokki',
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);

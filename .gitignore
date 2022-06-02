@@ -17,9 +17,9 @@ wp-content/plugins/hello.php
 /sitemap.xml.gz
 
 .idea
-vendor
-node_modules
-build
+vendor/
+node_modules/
+build/
 composer.lock
 package-lock.json
 

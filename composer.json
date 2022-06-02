@@ -1,19 +1,18 @@
 {
-  "name": "boospot/sgb",
-  "description": "Skeleton for WordPress Plugin Boilerplate with Namespace and Gutenberg Block support",
-  "type": "wordpress-plugin",
+  "name": "bjm/skeleton-block-theme",
+  "description": "Skeleton for WordPress Theme Boilerplate with Namespace and Gutenberg Block support",
+  "type": "wordpress-theme",
   "license": "GPL2",
   "authors": [
     {
-      "name": "Rao",
-      "email": "rao@booskills.com"
+      "name": "Bjm Team",
+      "email": "developers@bjmdigital.com.au"
     }
   ],
   "require": {},
   "autoload": {
     "classmap": [
       "includes",
-      "admin",
       "public"
     ]
   }

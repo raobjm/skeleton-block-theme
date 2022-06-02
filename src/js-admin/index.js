@@ -1,0 +1,1 @@
+console.log('this is file src/js-admin/index.js');
