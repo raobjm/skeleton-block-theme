@@ -32,7 +32,7 @@ import './editor.scss';
  */
 export default function Edit({attributes, className, setAttributes}) {
     return (
-        <div className={'sgb-message-block'}>
+        <div className={'-message-block'}>
             <div className={className}>
                 <TextControl
                     label={__('Message', 'gutenpride')}

@@ -118,7 +118,7 @@ class Blocks_Jsx {
 			 * plugin_dir_path( MY_PLUGIN ) . 'languages' ) ). For details see
 			 * https://make.wordpress.org/core/2018/11/09/new-javascript-i18n-support-in-wordpress/
 			 */
-			wp_set_script_translations( $this->editor_script_handle, 'skeleton-block-theme' );
+			wp_set_script_translations( $this->editor_script_handle, 'theme-text-domain' );
 		}
 
 		wp_localize_script( $this->editor_script_handle, 'SkeletonBlockTheme', $this->get_localize_script_data() );

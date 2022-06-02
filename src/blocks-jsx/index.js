@@ -1,1 +1,1 @@
-import "./message";
+import "./test-jsx-block";

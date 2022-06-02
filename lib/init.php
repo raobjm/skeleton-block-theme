@@ -16,3 +16,8 @@ require get_template_directory() . '/lib/constants.php';
  * Get Helper functions
  */
 require get_template_directory() . '/lib/helper-functions.php';
+
+/**
+ * Register CPTs
+ */
+require get_template_directory() . '/lib/cpt-register.php';

@@ -67,8 +67,8 @@ class After_Setup_Theme {
 		 */
 		// Example:
 		//register_nav_menus([
-		//	'primary-menu' => __('Header Menu', 'skeleton-block-theme'),
-		//	'secondary-menu' => __('Footer Menu', 'skeleton-block-theme'),
+		//	'primary-menu' => __('Header Menu', 'theme-text-domain'),
+		//	'secondary-menu' => __('Footer Menu', 'theme-text-domain'),
 		//]);
 
 	}

@@ -50,8 +50,8 @@ class Acf {
 
 		acf_add_options_page(
 			[
-				'page_title' => esc_html__( 'Theme Options', 'skeleton-block-theme' ),
-				'menu_title' => esc_html__( 'Theme Options', 'skeleton-block-theme' ),
+				'page_title' => esc_html__( 'Theme Options', 'theme-text-domain' ),
+				'menu_title' => esc_html__( 'Theme Options', 'theme-text-domain' ),
 				'menu_slug'  => 'theme-options', // after changing the slug, update Fields Group location as well
 				'capability' => 'manage_options',
 				'icon_url'   => 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MzYiIGhlaWdodD0iNjM2IiB2aWV3Qm94PSIwIDAgMzYzLjA0IDM2My4wNCINCiAgc2hhcGUtcmVuZGVyaW5nPSJnZW9tZXRyaWNQcmVjaXNpb24iIGltYWdlLXJlbmRlcmluZz0ib3B0aW1pemVRdWFsaXR5IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiNmZWZlZmUiDQogIHhtbG5zOnY9Imh0dHBzOi8vdmVjdGEuaW8vbmFubyI+DQogIDxwYXRoIGQ9Ik0wIDBoMzYzLjA0djM2My4wNEgweiIgZmlsbC1vcGFjaXR5PSIwIiAvPg0KICA8cGF0aA0KICAgIGQ9Ik03MS43IDkzLjYzbDY5LjAyLTM4LjUyTDcxLjcgMTYuMjJ6bTcwLjU0LTM1LjA5TDczLjYxIDk3LjA2bDY4LjYzIDM4Ljg5em0tMjkuNzQgNjQuODNsLTQwLjgtMjIuODh2NzcuNzlsMzkuMjctMjIuMTIgMjkuNzUtMTYuNzh6bTMwLjEyIDE5LjQ1bC02OC42MyAzOC44OSAxMS40NCA2LjQ4IDU3LjE5IDMyLjAzem0tMi4yOCA4MC44M2wtNjIuMTYtMzUuMDgtNi40OC0zLjQzdjc3LjQxem0yLjI4IDMuNDRsLTY4LjYzIDM4Ljg5IDY4LjYzIDM4LjUxem0tMi4yOCA4MC44NEw3MS43IDI2OS40MXY3Ny40MXptNzcuMDItMzguNTJsLTY4LjYzIDM4LjUyIDY4LjYzIDM4Ljg5em0zLjgyIDB2NzcuNDFsNjguMjUtMzguODl6bTEuOS0zLjQzbDY4LjI2IDM4LjUxdi03Ny40em0wLTg0LjI3bDY4LjI2IDM4LjN2LTc3LjE5em0tMS45LTMuNDNsNjguMjUtMzguOS02OC4yNS0zOC44OXptLTMuODIgMHYtNzcuNzlsLTY4LjYzIDM4Ljg5eiIgLz4NCjwvc3ZnPg=='
@@ -151,7 +151,7 @@ class Acf {
 //			'description' => __( 'Add block of cards for a post type.' ),
 //			'category'    => 'theme',
 //			'icon'        => 'forms',
-//			'keywords'    => [ 'skeleton-block-theme', 'cards', 'cpt', 'grid' ],
+//			'keywords'    => [ Skeleton Block Theme, 'cards', 'cpt', 'grid' ],
 //		];
 //
 //		$blocks[] = [
@@ -160,7 +160,7 @@ class Acf {
 //			'description' => __( 'Add block of accordions for a post type.' ),
 //			'category'    => 'theme',
 //			'icon'        => 'excerpt-view',
-//			'keywords'    => [ 'skeleton-block-theme', 'accordions', 'cpt', 'grid', 'cards', 'post type' ],
+//			'keywords'    => [ Skeleton Block Theme, 'accordions', 'cpt', 'grid', 'cards', 'post type' ],
 //		];
 //
 //		$blocks[] = [
@@ -169,17 +169,17 @@ class Acf {
 //			'description' => __( 'Add WPGB Grid with facets.' ),
 //			'category'    => 'theme',
 //			'icon'        => 'schedule',
-//			'keywords'    => [ 'skeleton-block-theme', 'wp grid builder', 'grid', 'cards', 'filter', 'facet' ],
+//			'keywords'    => [ Skeleton Block Theme, 'wp grid builder', 'grid', 'cards', 'filter', 'facet' ],
 //			'mode'        => 'edit',
 //		];
 //
 //		$blocks['social-share'] = [
 //			'name'        => 'social-share',
-//			'title'       => __( 'Blokki Social Share', 'skeleton-block-theme' ),
-//			'description' => __( 'Add social sharing buttons.', 'skeleton-block-theme' ),
+//			'title'       => __( 'Blokki Social Share', 'theme-text-domain' ),
+//			'description' => __( 'Add social sharing buttons.', 'theme-text-domain' ),
 //			'category'    => 'theme',
 //			'icon'        => 'share',
-//			'keywords'    => [ 'skeleton-block-theme', 'social-share' ],
+//			'keywords'    => [ Skeleton Block Theme, 'social-share' ],
 //		];
 
 		return apply_filters( SKELETON_BLOCK_THEME_PREFIX . 'acf_blocks_config', $blocks );
