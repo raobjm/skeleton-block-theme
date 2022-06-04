@@ -21,3 +21,8 @@ require get_template_directory() . '/lib/helper-functions.php';
  * Register CPTs
  */
 require get_template_directory() . '/lib/cpt-register.php';
+
+/**
+ * Remove Comment System
+ */
+require get_template_directory() . '/lib/disable-comments.php';
