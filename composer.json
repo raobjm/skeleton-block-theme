@@ -9,7 +9,9 @@
       "email": "developers@bjmdigital.com.au"
     }
   ],
-  "require": {},
+  "require": {
+    "tgmpa/tgm-plugin-activation": "^2.6"
+  },
   "autoload": {
     "classmap": [
       "includes",

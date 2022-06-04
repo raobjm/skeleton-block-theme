@@ -48,6 +48,7 @@ class Init {
 	public function __construct() {
 
 		$this->after_setup_theme();
+		$this->after_plugins_manager_hooks();
 		$this->define_acf_hooks();
 		$this->define_api_hooks();
 		$this->define_public_hooks();
@@ -79,6 +80,19 @@ class Init {
 	private function define_acf_hooks() {
 
 		new Acf();
+
+	}
+
+	/**
+	 * Register hooks related to Plugins Dependencies
+	 * of the theme.
+	 *
+	 * @since    0.0.1
+	 * @access   private
+	 */
+	private function after_plugins_manager_hooks() {
+
+		new Plugins_Manager();
 
 	}
 
