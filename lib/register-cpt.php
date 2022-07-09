@@ -1,5 +1,75 @@
 <?php
 
+function bjm_register_cpts_template() {
+	/**
+	 * Post Type: Theme Templates.
+	 */
+
+	$labels = [
+		"name"                     => __( "Theme Templates", "theme-text-domain" ),
+		"singular_name"            => __( "Theme Template", "theme-text-domain" ),
+		"menu_name"                => __( "Theme Templates", "theme-text-domain" ),
+		"all_items"                => __( "All Theme Templates", "theme-text-domain" ),
+		"add_new"                  => __( "Add new", "theme-text-domain" ),
+		"add_new_item"             => __( "Add new Theme Template", "theme-text-domain" ),
+		"edit_item"                => __( "Edit Theme Template", "theme-text-domain" ),
+		"new_item"                 => __( "New Theme Template", "theme-text-domain" ),
+		"view_item"                => __( "View Theme Template", "theme-text-domain" ),
+		"view_items"               => __( "View Theme Templates", "theme-text-domain" ),
+		"search_items"             => __( "Search Theme Templates", "theme-text-domain" ),
+		"not_found"                => __( "No Theme Templates found", "theme-text-domain" ),
+		"not_found_in_trash"       => __( "No Theme Templates found in trash", "theme-text-domain" ),
+		"parent"                   => __( "Parent Theme Template:", "theme-text-domain" ),
+		"featured_image"           => __( "Featured image for this Theme Template", "theme-text-domain" ),
+		"set_featured_image"       => __( "Set featured image for this Theme Template", "theme-text-domain" ),
+		"remove_featured_image"    => __( "Remove featured image for this Theme Template", "theme-text-domain" ),
+		"use_featured_image"       => __( "Use as featured image for this Theme Template", "theme-text-domain" ),
+		"archives"                 => __( "Theme Template archives", "theme-text-domain" ),
+		"insert_into_item"         => __( /** @lang text */ 'Insert into Theme Template', "theme-text-domain" ),
+		"uploaded_to_this_item"    => __( "Upload to this Theme Template", "theme-text-domain" ),
+		"filter_items_list"        => __( "Filter Theme Templates list", "theme-text-domain" ),
+		"items_list_navigation"    => __( "Theme Templates list navigation", "theme-text-domain" ),
+		"items_list"               => __( "Theme Templates list", "theme-text-domain" ),
+		"attributes"               => __( "Theme Templates attributes", "theme-text-domain" ),
+		"name_admin_bar"           => __( "Theme Template", "theme-text-domain" ),
+		"item_published"           => __( "Theme Template published", "theme-text-domain" ),
+		"item_published_privately" => __( "Theme Template published privately.", "theme-text-domain" ),
+		"item_reverted_to_draft"   => __( "Theme Template reverted to draft.", "theme-text-domain" ),
+		"item_scheduled"           => __( "Theme Template scheduled", "theme-text-domain" ),
+		"item_updated"             => __( "Theme Template updated.", "theme-text-domain" ),
+		"parent_item_colon"        => __( "Parent Theme Template:", "theme-text-domain" ),
+	];
+
+	$args = [
+		"label"                 => __( "Theme Templates", "theme-text-domain" ),
+		"labels"                => $labels,
+		"description"           => "",
+		"public"                => true,
+		"publicly_queryable"    => false,
+		"show_ui"               => true,
+		"show_in_rest"          => true,
+		"rest_base"             => "",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"has_archive"           => false,
+		"show_in_menu"          => true,
+		"show_in_nav_menus"     => true,
+		"delete_with_user"      => false,
+		"exclude_from_search"   => true,
+		"menu_position"         => 70,
+		"capability_type"       => "post",
+		"map_meta_cap"          => true,
+		"hierarchical"          => false,
+		"rewrite"               => [ "slug" => "bjm-template", "with_front" => false ],
+		"query_var"             => true,
+		"menu_icon"             => "dashicons-welcome-widgets-menus",
+		"show_in_graphql"       => false,
+	];
+
+	register_post_type( "bjm_template", $args );
+}
+
+add_action( 'init', 'bjm_register_cpts_template' );
+
 function bjm_register_cpts_faq() {
 	/**
 	 * Post Type: FAQs.
@@ -192,7 +262,7 @@ function bjm_register_cpts_resource() {
 		"show_in_rest"          => true,
 		"rest_base"             => "",
 		"rest_controller_class" => "WP_REST_Posts_Controller",
-		"has_archive"           => true,
+		"has_archive"           => false,
 		"show_in_menu"          => true,
 		"show_in_nav_menus"     => true,
 		"delete_with_user"      => false,

@@ -1,10 +1,12 @@
 <?php
 
-
-add_filter( SKELETON_BLOCK_THEME_PREFIX . 'acf_blocks_config', 'bjm_register_block_main_header');
-
-
-function bjm_register_block_main_header($blocks){
+/**
+ * Register Layout Block: Header
+ * @param $blocks
+ *
+ * @return mixed
+ */
+function bjm_register_layout_block_main_header($blocks){
 
 	$blocks[] = [
 		'name'        => 'layout-header-main',
@@ -17,12 +19,16 @@ function bjm_register_block_main_header($blocks){
 
 	return $blocks;
 }
+add_filter( SKELETON_BLOCK_THEME_PREFIX . 'acf_blocks_config', 'bjm_register_layout_block_main_header');
 
 
-add_filter( SKELETON_BLOCK_THEME_PREFIX . 'acf_blocks_config', 'bjm_register_block_main_footer');
-
-
-function bjm_register_block_main_footer($blocks){
+/**
+ * Register Layout Block: Footer
+ * @param $blocks
+ *
+ * @return mixed
+ */
+function bjm_register_layout_block_main_footer($blocks){
 
 	$blocks[] = [
 		'name'        => 'layout-footer-main',
@@ -35,3 +41,20 @@ function bjm_register_block_main_footer($blocks){
 
 	return $blocks;
 }
+add_filter( SKELETON_BLOCK_THEME_PREFIX . 'acf_blocks_config', 'bjm_register_layout_block_main_footer');
+
+
+function bjm_register_template_block_single_before($blocks){
+
+	$blocks[] = [
+		'name'        => 'template-single-before',
+		'title'       => __( 'Template Single Before' ),
+		'description' => __( 'The block will display the Before Template for Single' ),
+		'category'    => 'theme',
+		'icon'        => 'welcome-widgets-menus',
+		'keywords'    => [ 'single', 'bjm', 'acf', 'layout', 'template', 'before' ],
+	];
+
+	return $blocks;
+}
+add_filter( SKELETON_BLOCK_THEME_PREFIX . 'acf_blocks_config', 'bjm_register_template_block_single_before');

@@ -525,7 +525,7 @@
             "taxonomy": "",
             "allow_null": 1,
             "multiple": 0,
-            "return_format": "object",
+            "return_format": "id",
             "ui": 1
         },
         {
@@ -547,7 +547,7 @@
             "taxonomy": "",
             "allow_null": 1,
             "multiple": 0,
-            "return_format": "object",
+            "return_format": "id",
             "ui": 1
         },
         {
@@ -569,7 +569,7 @@
             "taxonomy": "",
             "allow_null": 1,
             "multiple": 0,
-            "return_format": "object",
+            "return_format": "id",
             "ui": 1
         },
         {
@@ -591,7 +591,51 @@
             "taxonomy": "",
             "allow_null": 1,
             "multiple": 0,
-            "return_format": "object",
+            "return_format": "id",
+            "ui": 1
+        },
+        {
+            "key": "field_62c965da4ad83",
+            "label": "Before Single Resource",
+            "name": "before_single_bjm_resource",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "bjm_template"
+            ],
+            "taxonomy": "",
+            "allow_null": 1,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
+        },
+        {
+            "key": "field_62c965ef4ad84",
+            "label": "After Single Resource",
+            "name": "after_single_bjm_resource",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "bjm_template"
+            ],
+            "taxonomy": "",
+            "allow_null": 1,
+            "multiple": 0,
+            "return_format": "id",
             "ui": 1
         },
         {
@@ -630,7 +674,7 @@
             "taxonomy": "",
             "allow_null": 1,
             "multiple": 0,
-            "return_format": "object",
+            "return_format": "id",
             "ui": 1
         },
         {
@@ -652,7 +696,7 @@
             "taxonomy": "",
             "allow_null": 1,
             "multiple": 0,
-            "return_format": "object",
+            "return_format": "id",
             "ui": 1
         },
         {
@@ -674,7 +718,7 @@
             "taxonomy": "",
             "allow_null": 1,
             "multiple": 0,
-            "return_format": "object",
+            "return_format": "id",
             "ui": 1
         },
         {
@@ -696,7 +740,7 @@
             "taxonomy": "",
             "allow_null": 1,
             "multiple": 0,
-            "return_format": "object",
+            "return_format": "id",
             "ui": 1
         }
     ],
@@ -718,5 +762,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1654171965
+    "modified": 1657366063
 }
