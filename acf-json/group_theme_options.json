@@ -742,6 +742,50 @@
             "multiple": 0,
             "return_format": "id",
             "ui": 1
+        },
+        {
+            "key": "field_62c9810efb17e",
+            "label": "Before Archive Resource",
+            "name": "before_archive_bjm_resource",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "bjm_template"
+            ],
+            "taxonomy": "",
+            "allow_null": 1,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
+        },
+        {
+            "key": "field_62c9811ffb17f",
+            "label": "After Archive Resource",
+            "name": "after_archive_bjm_resource",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "bjm_template"
+            ],
+            "taxonomy": "",
+            "allow_null": 1,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
         }
     ],
     "location": [
@@ -762,5 +806,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1657367070
+    "modified": 1657372980
 }

@@ -95,6 +95,51 @@ add_filter( SKELETON_BLOCK_THEME_PREFIX . 'acf_blocks_config', 'bjm_register_tem
 
 
 /**
+ * Register Template Block: Archive Before
+ *
+ * @param $blocks
+ *
+ * @return mixed
+ */
+function bjm_register_template_block_archive_before( $blocks ) {
+
+	$blocks[] = [
+		'name'        => 'template-archive-before',
+		'title'       => __( 'Template Archive Before' ),
+		'description' => __( 'The block will display the Before Template for Archive' ),
+		'category'    => 'theme',
+		'icon'        => 'welcome-widgets-menus',
+		'keywords'    => [ 'archive', 'bjm', 'acf', 'layout', 'template', 'before' ],
+	];
+
+	return $blocks;
+}
+
+add_filter( SKELETON_BLOCK_THEME_PREFIX . 'acf_blocks_config', 'bjm_register_template_block_archive_before' );
+
+/**
+ * Register Template Block: Archive After
+ *
+ * @param $blocks
+ *
+ * @return mixed
+ */
+function bjm_register_template_block_archive_after( $blocks ) {
+
+	$blocks[] = [
+		'name'        => 'template-archive-after',
+		'title'       => __( 'Template Archive After' ),
+		'description' => __( 'The block will display the After Template for Archive' ),
+		'category'    => 'theme',
+		'icon'        => 'welcome-widgets-menus',
+		'keywords'    => [ 'archive', 'bjm', 'acf', 'layout', 'template', 'after' ],
+	];
+
+	return $blocks;
+}
+
+add_filter( SKELETON_BLOCK_THEME_PREFIX . 'acf_blocks_config', 'bjm_register_template_block_archive_after' );
+/**
  * Register Query Block for Post Card
  *
  * @param $blocks
