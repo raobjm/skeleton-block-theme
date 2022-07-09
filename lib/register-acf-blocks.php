@@ -58,3 +58,18 @@ function bjm_register_template_block_single_before($blocks){
 	return $blocks;
 }
 add_filter( SKELETON_BLOCK_THEME_PREFIX . 'acf_blocks_config', 'bjm_register_template_block_single_before');
+
+function bjm_register_template_block_single_after($blocks){
+
+	$blocks[] = [
+		'name'        => 'template-single-after',
+		'title'       => __( 'Template Single After' ),
+		'description' => __( 'The block will display the After Template for Single' ),
+		'category'    => 'theme',
+		'icon'        => 'welcome-widgets-menus',
+		'keywords'    => [ 'single', 'bjm', 'acf', 'layout', 'template', 'after' ],
+	];
+
+	return $blocks;
+}
+add_filter( SKELETON_BLOCK_THEME_PREFIX . 'acf_blocks_config', 'bjm_register_template_block_single_after');
