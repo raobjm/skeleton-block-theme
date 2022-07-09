@@ -24,7 +24,7 @@
             "name": "logo",
             "type": "image",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -99,7 +99,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "JobAdder All Rights Reserved",
+            "default_value": "All Rights Reserved",
             "placeholder": "",
             "prepend": "",
             "append": "",
@@ -442,7 +442,7 @@
             "taxonomy": "",
             "allow_null": 1,
             "multiple": 0,
-            "return_format": "object",
+            "return_format": "id",
             "ui": 1
         },
         {
@@ -464,7 +464,7 @@
             "taxonomy": "",
             "allow_null": 1,
             "multiple": 0,
-            "return_format": "object",
+            "return_format": "id",
             "ui": 1
         },
         {
@@ -486,7 +486,7 @@
             "taxonomy": "",
             "allow_null": 1,
             "multiple": 0,
-            "return_format": "object",
+            "return_format": "id",
             "ui": 1
         },
         {
@@ -762,5 +762,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1657366063
+    "modified": 1657367070
 }
