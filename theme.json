@@ -3,11 +3,23 @@
   "version": 2,
   "templateParts": [
     {
-      "name": "header",
+      "name": "header-block-based",
+      "title": "Header Block based",
       "area": "header"
     },
     {
+      "name": "header",
+      "title": "Header",
+      "area": "header"
+    },
+    {
+      "name": "footer-block-based",
+      "title": "Footer Block based",
+      "area": "footer"
+    },
+    {
       "name": "footer",
+      "title": "Footer",
       "area": "footer"
     }
   ],

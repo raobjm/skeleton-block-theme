@@ -66,10 +66,10 @@ class After_Setup_Theme {
 		 * Register Menus
 		 */
 		// Example:
-		//register_nav_menus([
-		//	'primary-menu' => __('Header Menu', 'theme-text-domain'),
-		//	'secondary-menu' => __('Footer Menu', 'theme-text-domain'),
-		//]);
+		register_nav_menus( [
+			'primary-menu'   => __( 'Primary Menu', 'theme-text-domain' ),
+			'secondary-menu' => __( 'Secondary Menu', 'theme-text-domain' ),
+		] );
 
 	}
 

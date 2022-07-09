@@ -145,43 +145,6 @@ class Acf {
 			'keywords'    => [ 'test-block', 'bjm', 'acf', 'example' ],
 		];
 
-//		$blocks[] = [
-//			'name'        => 'cards',
-//			'title'       => __( 'Blokki Cards' ),
-//			'description' => __( 'Add block of cards for a post type.' ),
-//			'category'    => 'theme',
-//			'icon'        => 'forms',
-//			'keywords'    => [ Skeleton Block Theme, 'cards', 'cpt', 'grid' ],
-//		];
-//
-//		$blocks[] = [
-//			'name'        => 'accordions',
-//			'title'       => __( 'Blokki Accordions' ),
-//			'description' => __( 'Add block of accordions for a post type.' ),
-//			'category'    => 'theme',
-//			'icon'        => 'excerpt-view',
-//			'keywords'    => [ Skeleton Block Theme, 'accordions', 'cpt', 'grid', 'cards', 'post type' ],
-//		];
-//
-//		$blocks[] = [
-//			'name'        => 'grid-with-filters',
-//			'title'       => __( 'Blokki Grid with filters' ),
-//			'description' => __( 'Add WPGB Grid with facets.' ),
-//			'category'    => 'theme',
-//			'icon'        => 'schedule',
-//			'keywords'    => [ Skeleton Block Theme, 'wp grid builder', 'grid', 'cards', 'filter', 'facet' ],
-//			'mode'        => 'edit',
-//		];
-//
-//		$blocks['social-share'] = [
-//			'name'        => 'social-share',
-//			'title'       => __( 'Blokki Social Share', 'theme-text-domain' ),
-//			'description' => __( 'Add social sharing buttons.', 'theme-text-domain' ),
-//			'category'    => 'theme',
-//			'icon'        => 'share',
-//			'keywords'    => [ Skeleton Block Theme, 'social-share' ],
-//		];
-
 		return apply_filters( SKELETON_BLOCK_THEME_PREFIX . 'acf_blocks_config', $blocks );
 
 	}
