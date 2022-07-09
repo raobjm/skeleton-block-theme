@@ -1,19 +1,27 @@
+@import "settings";
+@import "mixins";
+@import "menu";
+
+
 // EXAMPLE_CODE this is just for test, you may delete
-body.home{
+body.home {
   color: purple;
 }
-.blokki-card{
+
+.blokki-card {
   height: 100%;
   border-radius: 20px;
   transition: all 0.2s ease-in-out;
 
-  &:hover{
-    box-shadow: 0px 0px 17px 0px rgb(0 0 0 / 50%);
+  &:hover {
+    box-shadow: 0 0 17px 0 rgb(0 0 0 / 50%);
   }
-  &.type-post{
+
+  &.type-post {
     background-color: pink;
   }
-  &.type-bjm_resource{
+
+  &.type-bjm_resource {
     background-color: deepskyblue;
   }
 }

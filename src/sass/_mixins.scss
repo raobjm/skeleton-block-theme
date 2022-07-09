@@ -1,0 +1,106 @@
+// fa-content: convenience function used to set content property
+@function fa-content($fa-var) {
+  @return unquote("\"#{ $fa-var }\"");
+}
+
+// Grids
+@mixin gridContainer($width: false) {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $grid-container;
+}
+
+
+
+@mixin alertBoxStyling {
+  .alert-box {
+    padding: 1rem;
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+
+    &.warning {
+      color: #8a6d3b;
+      background-color: #fcf8e3;
+      border-color: #faebcc;
+    }
+
+    &.error {
+      color: #a94442;
+      background-color: #f2dede;
+      border-color: #ebccd1;
+    }
+
+    &.success {
+      color: #3c763d;
+      background-color: #dff0d8;
+      border-color: #d6e9c6;
+    }
+  }
+}
+
+// Headings
+// Headings
+@mixin allHeadings {
+  h1, h2, h3, h4, h5, h6 {
+    @content;
+  }
+}
+
+
+@mixin breakpoint-medium-down {
+  @media screen and (max-width: #{map-get($breakpoints, medium)}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-medium-up {
+  @media screen and (min-width: #{map-get($breakpoints, medium)}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-large-down {
+  @media screen and (max-width: #{map-get($breakpoints, large)}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-large-up {
+  @media screen and (min-width: #{map-get($breakpoints, large)}) {
+    @content;
+  }
+}
+
+
+@mixin font-awesome-after-icon($fa-var) {
+  &:after {
+    content: fa-content($fa-var);
+    font-family: $font-awesome-family;
+    font-weight: $font-regular;
+    position: absolute;
+    font-size: 0.65em;
+    right: -0.65em;
+    top: calc(50% + 4px);
+    transform: translateY(-50%);
+  }
+}
+
+@mixin font-awesome-before-icon($fa-var) {
+  &:before {
+    padding-right: 10px;
+    content: fa-content($fa-var);
+    font-family: $font-awesome-family;
+  }
+}
+
+//Menu
+@mixin icon-right($fa-icon) {
+  display: flex;
+  &::after {
+    font-size: 1.5em;
+    @extend .fal;
+    content: fa-content($fa-icon);
+  }
+
+}

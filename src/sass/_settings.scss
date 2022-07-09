@@ -1,0 +1,112 @@
+// Grids
+
+// this should match with theme.json
+$grid-container: 1000px;
+$grid-container-wide: 1440px;
+$grid-container-narrow: 960px;
+//$grid-margin-gutters: (small: 23px, medium: 31px, large: 39px);
+//$grid-padding-gutters: (small: 46px, medium: 62px, large: 78px);
+//$grid-padding-gutters-reduce: (small: 46px, medium: 40px, large: 34px);
+
+$breakpoints: (
+        small: 0,
+        medium: 768px,
+        large: 1162px,
+        xlarge: 1250px,
+        xxlarge: 1440px,
+);
+
+/**
+ * Colours for Theme
+ * (Ideally, these should be css variables created with theme.json
+ */
+$primary-orange: #ED591B;
+$primary-navy: #393E44;
+$primary-grey: #C4C4C4;
+$primary-grey-dark: #4E4E4E;
+
+$secondary-peach: #FFF1EA;
+$secondary-peach-dark: #DC8F70;
+$secondary-grey: #FAFAFA;
+
+$tertiary-peach: #F8D5C7;
+$tertiary-peach-dark: #5F3D30;
+$tertiary-grey: #656565;
+
+$jaguar: #282829;
+
+// General Colors
+$white: #FFFFFF;
+$black: #000000;
+$red: #F0592F;
+$orange: #EF9F44;
+$green: #59BD74;
+$blue: #4FAEFB;
+
+/**
+ * Set Color Variables
+ */
+$text-color: $primary-navy;
+$grey-text: $primary-navy;
+
+$primary: $primary-orange;
+$primary2: $primary-navy;
+$primary3: $primary-grey;
+$primary4: $primary-grey-dark;
+
+$secondary: $secondary-peach;
+$secondary2: $secondary-grey;
+$secondary-light: rgba($secondary, .1);
+$secondary3: $jaguar;
+$secondary4: $tertiary-grey;
+
+$tertiary: $tertiary-peach;
+$tertiary2: $tertiary-peach-dark;
+
+$neutral1: $secondary-grey;
+$quaternary: $secondary-grey;
+
+// Style
+$radius-sm: 2px;
+$radius-md: 10px;
+$radius-lg: 15px;
+$radius-pill: 9999px;
+$radius-card: 10px;
+$radius-card-sm: 3px;
+$radius-card-md: 0.5rem;
+$radius-card-big: 21px;
+$shadow-sm: 0 2px 8px 0 rgba($grey-text, 0.025), 0 4px 12px 0 rgba($grey-text, 0.05);
+$shadow-md: 0 3px 9px 0 rgba($grey-text, 0.05), 0 6px 20px 0 rgba($grey-text, 0.1);
+$shadow-lg: 0 4px 10px 0 rgba($grey-text, 0.05), 0 10px 30px 0 rgba($grey-text, 0.1);
+$shadow-card: 0 0 10px rgba(105, 105, 105, 0.2);
+$shadow-card-hover: 0px 0px 20px rgba(105, 105, 105, 0.3);
+
+$card-icon-size: 2.5rem;
+$card-icon-padding-top: 1rem;
+
+// Fonts
+$font-colour: $text-color;
+$font-light: normal;
+$font-heavy: bold;
+$font-regular: 400;
+$font-medium: 500;
+$font-semi: 600;
+$font-bold: 700;
+$font-size-tiny: 0.6em;
+$font-size-small: 0.8em;
+$font-primary: var(--wp--preset--font-family--heading-font);
+$font-display: var(--wp--preset--font-family--body-font);
+$font-awesome-family: 'Font Awesome 6 Pro';
+
+
+// Transitions
+$transition-duration: 0.25s;
+$transition-style: cubic-bezier(0.46, 0.03, 0.52, 0.96);
+$transition: $transition-duration $transition-style;
+
+// Header
+$header-height-mobile: 80px;
+$header-height-desktop: 80px;
+$header-submenu-height: 75px;
+$admin-bar-height-mobile: 46px;
+$admin-bar-height-desktop: 32px;
