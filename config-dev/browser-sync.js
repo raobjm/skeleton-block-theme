@@ -2,7 +2,7 @@ const dotenv = require('dotenv');
 const browserSync = require('browser-sync').create();
 
 const conf = dotenv.config({
-    path: 'conf/.env'
+    path: 'config-dev/.env'
 }).parsed;
 
 browserSync.init({

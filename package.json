@@ -1,7 +1,7 @@
 {
-	"name": "skeleton_block_theme",
+	"name": "skeleton-block-theme",
 	"version": "1.0.0",
-	"description": "Skeleton with Plugin boilerplate and gutenberg block support",
+	"description": "Skeleton Starter Theme boilerplate and gutenberg block support",
 	"author": "BooSpot",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
@@ -16,7 +16,7 @@
 		"start": "wp-scripts start src/index.js src/public.js",
 		"packages-update": "wp-scripts packages-update",
 		"create-zip": "wp-scripts plugin-zip",
-		"sync": "browser-sync start --config \"conf/browser-sync.js\"",
+		"sync": "browser-sync start --config \"config-dev/browser-sync.js\"",
 		"dev": "concurrently -k \"npm run start\" \"npm run sync\""
 	},
 	"dependencies": {
