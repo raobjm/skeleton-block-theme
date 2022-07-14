@@ -22,17 +22,21 @@ Skeleton for WordPress Plugin Boilerplate with Namespace and Gutenberg Block sup
    
 4. To install NPM dependencies, run the following command:
    * `npm install`
+
+5. Create `.env` file for local server proxy
+   * The file `.env` should be created under `\conf` directory 
+   * The local dev server proxy should be added like this: `PROXY=mylocalsite.test`
    
-5. After doing all the magic of coding, run:
+6. After doing all the magic of coding, run:
    * `npm run build`
    
-6. While developing you may use the watcher by using the command:
+7. While developing you may use the watcher by using the command:
    * `npm run start`
    
-7. To Updates WordPress packages to the latest version:
+8. To Updates WordPress packages to the latest version:
    * `npm run packages-update`
 
-8. Complete list of commands can be found here: [https://www.npmjs.com/package/@wordpress/create-block](https://www.npmjs.com/package/@wordpress/create-block) 
+9. Complete list of commands can be found here: [https://www.npmjs.com/package/@wordpress/create-block](https://www.npmjs.com/package/@wordpress/create-block) 
 
 ## Steps required to release plugin:
 

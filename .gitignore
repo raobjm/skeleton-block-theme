@@ -22,4 +22,5 @@ node_modules/
 build/
 composer.lock
 package-lock.json
+conf/.env
 
