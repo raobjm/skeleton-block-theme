@@ -144,3 +144,14 @@ if ( ! function_exists( 'bjm_get_template_archive_after' ) ) :
 	}
 
 endif;
+
+
+if ( ! function_exists( 'bjm_get_post_thumbnail_mime_type' ) ) :
+
+	function bjm_get_post_thumbnail_mime_type( $post_id ) {
+		$mime_type = mime_content_type( get_attached_file( get_post_thumbnail_id( $post_id ) ) );
+
+		return sanitize_key( str_replace( 'image', '', $mime_type ) );
+	}
+
+endif;

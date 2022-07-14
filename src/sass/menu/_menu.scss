@@ -12,23 +12,37 @@ $mobile-menu-padding-left: 2rem;
 $mobile-menu-padding-right: 2rem;
 $mobile-menu-padding-bottom: 2rem;
 
+@mixin breakpoint-menu-up {
+  @media screen and (min-width: #{map-get($breakpoints, large)}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-menu-down {
+  @media screen and (max-width: #{map-get($breakpoints, large)}) {
+    @content;
+  }
+}
+
 .primary-menu {
+
+  .menu{
+    display: flex;
+    list-style: none;
+    align-items: baseline;
+  }
 
   .bjm-icon-wrapper {
     color: $tertiary2;
     text-align: center;
 
-    @include breakpoint-large-up {
+    @include breakpoint-menu-up {
       width: 20px;
     }
   }
 
   .menu-description {
     display: block;
-    font-weight: normal;
-
-    font-size: 0.8rem;
-    line-height: rem-calc(18);
     transition: 1s ease;
     margin-top: 0.3rem;
   }
@@ -58,7 +72,7 @@ $mobile-menu-padding-bottom: 2rem;
     }
 
     .submenu {
-      @include breakpoint-large-up {
+      @include breakpoint-menu-up {
         a {
           &:after {
             display: none;
@@ -75,8 +89,9 @@ $mobile-menu-padding-bottom: 2rem;
     position: relative;
     line-height: 1em;
     padding: 0.50rem 0;
+    text-decoration: unset;
 
-    @include breakpoint-large-up {
+    @include breakpoint-menu-up {
       color: $text-color;
       padding: 0.5rem;
       background-color: transparent;
@@ -84,7 +99,7 @@ $mobile-menu-padding-bottom: 2rem;
     }
   }
 
-  @include breakpoint-large-down {
+  @include breakpoint-menu-down {
     width: 100%;
   }
 
@@ -92,33 +107,31 @@ $mobile-menu-padding-bottom: 2rem;
     position: initial;
     flex-direction: column;
 
-    @include breakpoint(large) {
+    @include breakpoint-menu-up  {
       flex-direction: row;
       justify-content: flex-end;
     }
 
     > .menu-item {
-      @include breakpoint(large) {
+      @include breakpoint-menu-up  {
         // for on hover border bottom
         padding: 0.75rem 0.75rem 0 0.75rem;
       }
-      @include breakpoint(medium down) {
+      @include breakpoint-menu-down  {
         background-color: $mobile-menu-background-color;
         border-bottom: 1px solid $mobile-menu-border-color;
-
       }
 
       > a {
-        @include breakpoint(medium down) {
+        @include breakpoint-menu-down {
           padding-top: 1.5rem;
           padding-bottom: 1.5rem;
         }
 
 
-        @include breakpoint(large) {
+        @include breakpoint-menu-up {
           outline: none;
           padding: 0 0 0.75rem 0; // for on hover border bottom
-          font-size: rem-calc(17);
           text-transform: none;
           flex-direction: row;
           font-weight: 400;
@@ -134,7 +147,7 @@ $mobile-menu-padding-bottom: 2rem;
 
       }
 
-      @include breakpoint(large) {
+      @include breakpoint-menu-up {
         &:hover > a,
         &.is-open > a,
         &.current-menu-item > a,
@@ -158,17 +171,16 @@ $mobile-menu-padding-bottom: 2rem;
           display: none;
         }
 
-        @include breakpoint(xlarge) {
+        @include breakpoint-menu-up {
           &::before {
             display: none;
           }
         }
-        @include breakpoint(large) {
+        @include breakpoint-menu-up {
           &::after {
             position: relative;
             right: unset;
-            content: fa-content($fa-var-chevron-down);
-            padding: 0 rem-calc(5) 0;
+            content: fa-content('\f078');
             font-weight: bold;
             font-size: 0.6em;
           }
@@ -180,7 +192,7 @@ $mobile-menu-padding-bottom: 2rem;
         > a {
           &::after {
             transform: rotate(180deg);
-            padding: 0 rem-calc(5) 0;
+            padding: 0 5px 0;
           }
         }
       }
@@ -192,7 +204,7 @@ $mobile-menu-padding-bottom: 2rem;
       }
 
       + .menu-item:not(.is-primary) {
-        @include breakpoint(xlarge) {
+        @include breakpoint-menu-up {
           margin-left: 1.25rem;
           padding-left: 1.25rem;
 
@@ -211,7 +223,7 @@ $mobile-menu-padding-bottom: 2rem;
     }
 
     > .mobile-only {
-      @include breakpoint(xlarge) {
+      @include breakpoint-menu-up {
         display: none;
       }
     }
@@ -239,7 +251,7 @@ $mobile-menu-padding-bottom: 2rem;
     }
 
     .menu-item {
-      @include breakpoint(large) {
+      @include breakpoint-menu-up {
 
         &.has-right-border {
           border-right: solid $neutral1 1px;
@@ -248,7 +260,7 @@ $mobile-menu-padding-bottom: 2rem;
         }
       }
 
-      @include breakpoint(medium down) {
+      @include breakpoint-menu-down {
         &.has-bottom-border {
           border-bottom: 1px solid $mobile-menu-border-color;
           padding-bottom: $mobile-menu-padding-bottom;
@@ -273,7 +285,7 @@ $mobile-menu-padding-bottom: 2rem;
     overflow-y: scroll;
     background-color: $white;
 
-    @include breakpoint(large) {
+    @include breakpoint-menu-up {
 
       //height: auto !important;
       max-height: calc(100vh - #{$header-height-desktop});
@@ -282,11 +294,6 @@ $mobile-menu-padding-bottom: 2rem;
       overflow-y: inherit;
       padding-bottom: 0;
     }
-
-
-    //.admin-bar & {
-    //  height: calc(var(--viewport-height) - #{$header-height-desktop} - #{$wp-bar-height-mobile});
-    //}
 
     a {
       padding-left: 0;
@@ -297,7 +304,7 @@ $mobile-menu-padding-bottom: 2rem;
       li {
         &.has-icon {
           a {
-            @include breakpoint(large) {
+            @include breakpoint-menu-up {
               margin-left: -1rem;
               padding: 1.5rem 0 1.5rem 1rem;
             }
@@ -323,7 +330,6 @@ $mobile-menu-padding-bottom: 2rem;
       grid-template-columns: 1rem 1fr;
       width: 100%;
       background-color: $white;
-      font-size: rem-calc(18);
 
       i {
         font-size: 0.9em;
@@ -334,7 +340,7 @@ $mobile-menu-padding-bottom: 2rem;
         margin-left: 0.5rem;
       }
 
-      @include breakpoint(large) {
+      @include breakpoint-menu-up {
         display: none;
       }
 
@@ -345,7 +351,7 @@ $mobile-menu-padding-bottom: 2rem;
       margin-left: auto;
       margin-right: auto;
 
-      @include breakpoint(large down) {
+      @include breakpoint-menu-down {
         flex-direction: column;
         padding-left: 0;
         padding-right: 0;
@@ -358,7 +364,7 @@ $mobile-menu-padding-bottom: 2rem;
       margin-bottom: 1rem;
       max-width: 40rem;
 
-      @include breakpoint(xlarge) {
+      @include breakpoint-menu-up {
         padding-right: 2.5rem;
       }
 
@@ -370,7 +376,6 @@ $mobile-menu-padding-bottom: 2rem;
       }
 
       &-content {
-        font-size: rem-calc(0.8em);
         font-family: $font-primary;
         font-weight: $font-regular;
         color: $quaternary;
@@ -419,7 +424,7 @@ $mobile-menu-padding-bottom: 2rem;
       max-height: calc(100vh - #{$header-height-mobile});
       z-index: 1;
 
-      @include breakpoint(xlarge) {
+      @include breakpoint-menu-up {
         left: calc(100% + 2.5rem);
         max-height: calc(100vh - #{$header-height-desktop});
       }
@@ -436,7 +441,7 @@ $mobile-menu-padding-bottom: 2rem;
     z-index: 11;
     min-height: 100%;
     display: block;
-    @include breakpoint(large) {
+    @include breakpoint-menu-up {
       min-height: unset;
     }
   }
@@ -473,7 +478,7 @@ $mobile-menu-padding-bottom: 2rem;
       }
     }
 
-    @include breakpoint(large) {
+    @include breakpoint-menu-up {
       &.depth-0 {
         display: flex;
         justify-content: center;
@@ -505,7 +510,7 @@ $mobile-menu-padding-bottom: 2rem;
         flex-grow: 1;
       }
     }
-    @include breakpoint(medium down) {
+    @include breakpoint-menu-down {
       &.depth-0 {
         padding: 0;
         height: auto;
@@ -537,13 +542,6 @@ $mobile-menu-padding-bottom: 2rem;
 
 }
 
-
-.product-sub-menu .submenu .sub-list .bjm-link-type-default.has-icon a {
-  @include breakpoint(large) {
-    min-height: 120px;
-  }
-}
-
 .menu-cta-button {
   margin-left: 10px;
 }
@@ -557,7 +555,7 @@ $mobile-menu-padding-bottom: 2rem;
   cursor: pointer;
   margin-left: 1rem;
 
-  @include breakpoint(large) {
+  @include breakpoint-menu-up {
     display: none;
     position: absolute;
     top: 23px;
@@ -637,11 +635,11 @@ $mobile-menu-padding-bottom: 2rem;
 }
 
 .header-nav {
-  display: none;
   padding-top: 1rem;
   padding-bottom: 1rem;
 
-  @include breakpoint(medium down) {
+  @include breakpoint-menu-down {
+    display: none;
     position: absolute;
     top: $header-height-mobile;
     left: 0;
@@ -651,11 +649,11 @@ $mobile-menu-padding-bottom: 2rem;
     overflow-y: auto;
   }
 
-  @include breakpoint(large down) {
+  @include breakpoint-menu-down {
     padding-top: 0;
   }
 
-  @include breakpoint(large) {
+  @include breakpoint-menu-up {
     display: flex;
     padding-top: 0;
     padding-bottom: 0;
@@ -679,12 +677,11 @@ $mobile-menu-padding-bottom: 2rem;
     background-color: $white;
     flex-direction: column;
     align-items: center;
-    @include breakpoint(medium down) {
+    @include breakpoint-menu-down {
       padding: $mobile-menu-padding-bottom;
-      @include xy-gutters($gutters: $grid-padding-gutters, $gutter-type: 'padding');
     }
 
-    @include breakpoint(large) {
+    @include breakpoint-menu-up {
       background-color: unset;
       flex-direction: row;
       align-items: flex-start;

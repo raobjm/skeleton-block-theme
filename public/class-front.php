@@ -10,7 +10,6 @@ namespace SkeletonBlockTheme;
  * @package    SkeletonBlockTheme
  * @subpackage SkeletonBlockTheme/public
  */
-
 class Front {
 
 	/**
@@ -23,10 +22,10 @@ class Front {
 	 */
 	private $public_script_handle;
 
-	public function __construct( ) {
+	public function __construct() {
 
 		$this->public_style_handle  = SKELETON_BLOCK_THEME_IDENTIFIER . '-public-style';
-		$this->public_script_handle  = SKELETON_BLOCK_THEME_IDENTIFIER . '-public-script';
+		$this->public_script_handle = SKELETON_BLOCK_THEME_IDENTIFIER . '-public-script';
 
 		$this->register_hooks();
 	}
@@ -91,7 +90,8 @@ class Front {
 			$this->public_script_handle,
 			bjm_get_build_url( 'public.js' ),
 			$script_asset['dependencies'],
-			$script_asset['version']
+			$script_asset['version'],
+			true
 		);
 
 		/**
