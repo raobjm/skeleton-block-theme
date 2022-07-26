@@ -12,6 +12,8 @@ node_modules/
 src/
 config-dev/
 
+skeleton-block-theme.zip
+
 .gitignore
 .npmignore
 
